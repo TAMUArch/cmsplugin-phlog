@@ -1,3 +1,9 @@
+0.2.4 (2013/03/13)
+------------------
+
+* Updated to use static files app
+* Updated widget for new statics
+
 0.2.3 (2012/01/11)
 ------------------
 
