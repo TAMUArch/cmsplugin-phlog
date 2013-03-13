@@ -10,8 +10,8 @@ except Exception, e:
 
 class ChildPluginsField(Field):
     widget = PluginsWidget
-    
+
     def __init__(self, **kwargs):
         kwargs['required'] = False
         super(ChildPluginsField, self).__init__(**kwargs)
-    
+

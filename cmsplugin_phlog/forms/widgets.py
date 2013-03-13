@@ -20,14 +20,14 @@ _base_css = list(os.path.join(settings.CMS_MEDIA_URL, path) for path in (
                 'css/jquery/cupertino/jquery-ui.css',))
 
 CMS_PLUGIN_PHLOG_MEDIA_URL = getattr(settings, 'CMS_PLUGIN_PHLOG_MEDIA_URL',
-        join(settings.STATIC_URL, 'phlog'))
+        os.path.join(settings.STATIC_URL, 'phlog'))
 
 class PluginsWidget(Widget):
     class Media:
         css = {
             'all': _base_css + [CMS_PLUGIN_PHLOG_MEDIA_URL.rstrip('/') + '/css/plugins_widget.css']
         }
-        js = _base_js + [CMS_PLUGIN_PHLOG_MEDIA_URL.rstip('/') + '/js/plugins_widget.js']
+        js = _base_js + [CMS_PLUGIN_PHLOG_MEDIA_URL.rstrip('/') + '/js/plugins_widget.js']
 
     def __init__(self, request=None, **kwargs):
         super(PluginsWidget, self).__init__(**kwargs)
