@@ -5,9 +5,11 @@ from south.v2 import SchemaMigration
 from django.db import models
 
 class Migration(SchemaMigration):
+    depends_on = (
+        ("photologue", "0001_initial"),
+    )
 
     def forwards(self, orm):
-        
         # Adding model 'PhlogGalleryPlugin'
         db.create_table('cmsplugin_phloggalleryplugin', (
             ('cmsplugin_ptr', self.gf('django.db.models.fields.related.OneToOneField')(to=orm['cms.CMSPlugin'], unique=True, primary_key=True)),
@@ -21,7 +23,6 @@ class Migration(SchemaMigration):
 
 
     def backwards(self, orm):
-        
         # Deleting model 'PhlogGalleryPlugin'
         db.delete_table('cmsplugin_phloggalleryplugin')
 
@@ -106,4 +107,4 @@ class Migration(SchemaMigration):
         }
     }
 
-    complete_apps = ['cmsplugin_phlog']
+    complete_apps = ['cmsplugin_phlog', 'photologue']
