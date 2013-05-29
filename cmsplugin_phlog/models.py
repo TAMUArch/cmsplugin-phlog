@@ -134,7 +134,13 @@ class PhlogPhotoPlugin(CMSPlugin):
             return self.photos.all()[0].title
         except:
             return 'PhlogPhotoPlugin #%d' % (self.pk,)
-    
+
+    def copy_relations(self, oldinstance):
+        for photo in oldinstance.photos.all():
+            photo.pk = None
+            photo.plugin = self
+            photo.save()
+
     @property
     def render_template(self):
         return select_template([
