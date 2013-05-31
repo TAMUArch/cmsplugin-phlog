@@ -83,7 +83,7 @@ class PhlogGalleryPlugin(CMSPluginBase):
     change_form_template = 'cms/plugins/phlog/gallery_change_form.html'
     # Need to create a form for the plugin to add a widget for child plugins
     allow_children = True
-    child_classes = [PhlogPhotoPlugin]
+    child_classes = ["PhlogPhotoPlugin"]
 
     def render(self, context, instance, placeholder):
         context.update({
