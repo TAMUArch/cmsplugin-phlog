@@ -1,3 +1,10 @@
+0.3 (2013/06/07)
+----------------
+
+* Added copy relations to plugin for CMS publishing support
+* Fixed JS locations
+* Some upgrades and added some logging
+
 0.2.4.2 (2013/04/08)
 --------------------
 
