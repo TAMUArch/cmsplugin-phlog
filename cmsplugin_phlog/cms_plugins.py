@@ -91,8 +91,9 @@ class PhlogGalleryPlugin(CMSPluginBase):
             'gallery': instance})
 
         context.update({
-            'plugins': render_plugins(instance.get_children(),
-                                      context, placeholder)
+            'plugins': render_plugins(
+                instance.get_children().order_by('position','id'),
+                context, placeholder)
         })
 
         return context
