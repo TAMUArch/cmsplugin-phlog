@@ -1,3 +1,8 @@
+0.3.1 (2013/06/26)
+------------------
+
+* Added proper ordering to gallery rendering
+
 0.3 (2013/06/07)
 ----------------
 
