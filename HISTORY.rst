@@ -1,3 +1,8 @@
+0.3.3 (2013/10/31)
+------------------
+
+* Changed the boolean crop field to a char choice field
+
 0.3.2 (2013/10/31)
 ------------------
 
