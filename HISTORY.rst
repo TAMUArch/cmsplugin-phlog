@@ -1,3 +1,8 @@
+0.3.2 (2013/10/31)
+------------------
+
+* Added crop field to gallery model and migration
+
 0.3.1 (2013/06/26)
 ------------------
 
