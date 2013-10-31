@@ -10,7 +10,7 @@ class Migration(SchemaMigration):
     def forwards(self, orm):
         # Adding field 'GalleryPlugin.crop'
         db.add_column(u'cmsplugin_phlog_gallery', 'crop',
-                      self.gf('django.db.models.fields.BooleanField')(default=True),
+                      self.gf('django.db.models.fields.CharField')(default='center', max_length=12),
                       keep_default=False)
 
 
@@ -44,7 +44,7 @@ class Migration(SchemaMigration):
         u'cmsplugin_phlog.galleryplugin': {
             'Meta': {'object_name': 'GalleryPlugin', 'db_table': "u'cmsplugin_phlog_gallery'", '_ormbases': ['cms.CMSPlugin']},
             u'cmsplugin_ptr': ('django.db.models.fields.related.OneToOneField', [], {'to': "orm['cms.CMSPlugin']", 'unique': 'True', 'primary_key': 'True'}),
-            'crop': ('django.db.models.fields.BooleanField', [], {'default': 'True'}),
+            'crop': ('django.db.models.fields.CharField', [], {'default': "'center'", 'max_length': '12'}),
             'height': ('django.db.models.fields.PositiveIntegerField', [], {'null': 'True', 'blank': 'True'}),
             'template': ('django.db.models.fields.CharField', [], {'max_length': '255', 'blank': 'True'}),
             'width': ('django.db.models.fields.PositiveIntegerField', [], {'null': 'True', 'blank': 'True'})

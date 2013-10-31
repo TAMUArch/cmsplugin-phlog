@@ -153,14 +153,14 @@ class GalleryPlugin(CMSPlugin):
                                 u'the standard templates')
     width = models.PositiveIntegerField(null=True, blank=True)
     height = models.PositiveIntegerField(null=True, blank=True)
-    crop = models.CharField(verbose_name="Crop Photos From",
-            max_length=11, choices=(
+    crop = models.CharField(verbose_name="Crop From",
+            max_length=12, choices=(
                 ("none", "Don't Crop"),
                 ("top left", "Top Left"),
                 ("top right", "Top Right"),
                 ("center", "Center"),
-                ("lower left", "Lower Left"),
-                ("lower right", "Lower Right")), 
+                ("bottom left", "Lower Left"),
+                ("bottom right", "Lower Right")), 
             default="center")
     
     class Meta:
