@@ -153,6 +153,9 @@ class GalleryPlugin(CMSPlugin):
                                 u'the standard templates')
     width = models.PositiveIntegerField(null=True, blank=True)
     height = models.PositiveIntegerField(null=True, blank=True)
+    crop = models.BooleanField(verbose_name="Crop Photos", blank=True, default=True, 
+                               help_text=u'When selected photos will be cropped '
+                               u'to fill the gallery view')
     
     class Meta:
         db_table = 'cmsplugin_phlog_phlog_gallery'
