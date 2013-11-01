@@ -1,3 +1,5 @@
+<meta name="imageCrop" content="{% if gallery.crop == 'none' %}false{% else %}true{% endif %}">
+<meta name="imagePosition" content="{% if gallery.crop == 'none' %}center{% else %}{{ gallery.crop }}{% endif %}">
 {% if preview %}
 <div id="phlog-gallery-{{ gallery.id }}">
 	{% if plugins %}
