@@ -161,7 +161,9 @@ class GalleryPlugin(CMSPlugin):
                 ("center", "Center"),
                 ("bottom left", "Lower Left"),
                 ("bottom right", "Lower Right")), 
-            default="center")
+            default="center",
+            help_text=u"Crops photos in the standard view, "
+                      u"does not apply to fullscreen view")
     
     class Meta:
         db_table = 'cmsplugin_phlog_phlog_gallery'
