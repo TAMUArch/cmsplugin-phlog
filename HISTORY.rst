@@ -1,3 +1,8 @@
+0.3.4 (2013/11/01)
+------------------
+
+* Added help text to the crop field and meta tags to the gallery templates
+
 0.3.3 (2013/10/31)
 ------------------
 
